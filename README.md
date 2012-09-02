@@ -15,5 +15,5 @@ External Links
 Repository Sitemap
 ------------------
 
-> /lecture        Lecture Notes
-> /assignments    Homework and Lab Assignment Listing
+    /lecture        Lecture Notes
+    /assignments    Homework and Lab Assignment Listing
