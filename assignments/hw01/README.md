@@ -9,8 +9,10 @@ Homework 1
 A list of tasks were given in class, that should be completed by our next meeting.
 
 * Locate or order a textbook (bring shipping confirmation to class)
+
 * Log into [Codecademy](http://www.codecademy.com) preferably with Facebook
  * Complete the 8 courses that make up the Python Track
+
 * Log into [Github](http://www.github.com)
  * Create an account if necessary
  * Log into [Gravatar](http://www.gravatar.com) and upload an image
