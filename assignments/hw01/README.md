@@ -4,7 +4,7 @@ CS 240: Computer Science II
 Homework 1
 ----------
 
-# Description
+### Description
 
 A list of tasks were given in class, that should be completed by our next meeting.
 
