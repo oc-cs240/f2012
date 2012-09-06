@@ -7,4 +7,10 @@ Homework 2
 ### Description
 
 #### New Codecademy Content Added!!
-Complete Part 5 (Lists & Dictionaries)
+
+* Complete Part 5 (Lists & Dictionaries)
+
+#### Textbook
+
+* Read Ch. 11 (p. 457)
+
