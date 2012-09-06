@@ -6,4 +6,5 @@ Homework 2
 
 ### Description
 
-
+#### New Codecademy Content Added!!
+Complete Part 5 (Lists & Dictionaries)
