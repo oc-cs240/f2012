@@ -9,6 +9,6 @@ Use PyGame to open a window and put a drawing on the screen. The window should b
 
 How To
 ------
-Use [color](http://pygame.org/docs/ref/color.html) and [draw](http://pygame.org/docs/ref/draw.html) commands from PyGame. For the background, do some investigation...
+Use [color](http://pygame.org/docs/ref/color.html) and [draw](http://pygame.org/docs/ref/draw.html) modules from PyGame. For the background, do some investigation...
 
 The window should stay open until closed by the user, either clicking on the window close box, or pressing 'q' on the keyboard.
