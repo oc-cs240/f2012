@@ -1,3 +1,6 @@
+# pygame1.py
+# A simple pygame program
+
 import pygame
 
 pygame.init()	# Initialized pygame module
