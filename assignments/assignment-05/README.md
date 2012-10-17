@@ -14,9 +14,9 @@ To make your Flag class easy to use and to add functionality, store the location
 How To
 ------
 Define a class:
-> * Flag
->  * Members:
->   - rect
->  * Methods:
->   - __init__()
->   - draw()
+ * Flag
+  * Members:
+   - rect
+  * Methods:
+   - \_\_init\_\_\(\)
+   - draw()
