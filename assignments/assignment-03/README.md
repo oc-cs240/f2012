@@ -1,8 +1,8 @@
 CS 240: Computer Science II
 ===========================
 
-Lab 01
-------
+Assignment 03
+-------------
 
 ### Description
 Use PyGame to open a window and put a drawing on the screen. The window should be 640x480, with a pale blue background. Draw a rendition of the olympic flag in the center of the window. The drawing particulars are left underspecified, to allow your own artistic interpretation.
