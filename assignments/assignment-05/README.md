@@ -18,5 +18,5 @@ Define a class:
  * Members:
   - rect
  * Methods:
-  - __init__()
+  - <blockquote>__init__()</blockquote>
   - draw()
