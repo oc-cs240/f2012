@@ -10,12 +10,19 @@ width, height = 640, 480
 
 screen = pygame.display.set_mode((width, height))
 
-ball = pygame.image.load("ball.gif").convert_alpha()
-pygame.draw.circle(ball, pygame.Color('magenta'), (25, 25), 10)
+ball = pygame.image.load("ball.gif").convert()
+# pygame.draw.circle(ball, pygame.Color('magenta'), (25, 25), 10)
 ball_rect = ball.get_rect()
+print 'ball_rect', ball_rect
+
+ball2 = ball.copy()
+ball2_rect = ball2.get_rect()
 
 horizontal = 1
 vertical = 3
+spin = 30
+
+clock = pygame.time.Clock()
 
 running = True
 while running:
@@ -23,10 +30,11 @@ while running:
 
     screen.fill((0, 0, 0))          # Redraw background
     screen.blit(ball, ball_rect)    # Draw ball to screen
+    # screen.blit(ball2, (0, 0), ball2_rect)
     pygame.display.flip()           # Display screen in window
-    ball_rect[0] += horizontal      # Move ball, 1 pixel right
-    ball_rect[1] += vertical        # Move ball, 1 pixel right
+    ball_rect.move_ip(horizontal, vertical)
 
+    # Move the ball
     if ball_rect.right >= width:
         horizontal = -1
     elif ball_rect.left <= 0:
@@ -36,6 +44,28 @@ while running:
     elif ball_rect.top <= 0:
         vertical = 3
 
+    # # Rotate the ball
+    spun = pygame.transform.rotate(ball, spin)
+    spun_rect = spun.get_rect()
+    shrink = ball_rect.width - spun_rect.width
+    spun_rect.inflate_ip(shrink, shrink)
+    # ball2.fill((0, 0, 0))
+    ball.blit(spun, (0, 0), spun_rect)
+    # print spun_rect
+    # pygame.display.flip()           # Display screen in window
+    # ball2_rect = ball2.get_rect()
+    # shrink = ball_rect.width - ball2_rect.width
+    # ball2_rect.inflate_ip(shrink, shrink)
+    # ball2.blit(ball2, ball2_rect)
+    # print 'ball2_rect', ball2_rect
+    # ball_rect = ball.get_rect()
+    # deflate = ball_rect.width - ball2_rect.width
+    # ball2_rect.inflate_ip(deflate, deflate)
+    # # print offset
+    # # ball.fill((0, 0, 0))
+    # ball.blit(ball2, (0, 0), ball2_rect)
+
+    clock.tick(20)
     for event in pygame.event.get():
         if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
             # exit()
