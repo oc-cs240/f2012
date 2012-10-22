@@ -8,7 +8,6 @@ width, height = 800, 600
 
 def init():
     pygame.init()   # Initialized pygame module
-    pygame.key.set_repeat(60, 30)
 
     # Screen
     return pygame.display.set_mode((width, height))
@@ -63,31 +62,16 @@ def main(screen):
     running = True
 
     ship = load_ship()
-    x, y = 100, 100
     space = build_space(screen)
     while running:
         screen.blit(space, (0, 0))
-        screen.blit(ship, (x, y))
+        screen.blit(ship, (100, 100))
         pygame.display.flip()           # Display screen in window
 
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
                 # exit()
                 running = False
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_q:
-                    running = False
-                elif event.key == pygame.K_LEFT:
-                    x -= 2
-                elif event.key == pygame.K_RIGHT:
-                    x += 2
-                elif event.key == pygame.K_UP:
-                    y -= 2
-                elif event.key == pygame.K_DOWN:
-                    y += 2
-                elif event.key == pygame.K_SPACE:
-                    x += random.randint(10, 20)
-                    y += random.randint(10, 20)
 
 
 screen = init()
