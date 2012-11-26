@@ -1,13 +1,16 @@
-# 
+# A basic pygame template
 
 import pygame
 
+WINDOW_TITLE = 'PyGame'
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 600
 
 def init():
-    width, height = 800, 600
     pygame.init()
-    # Screen
-    return pygame.display.set_mode((width, height))
+    pygame.display.set_caption(WINDOW_TITLE)
+
+    return pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 
 
 def main(screen):
