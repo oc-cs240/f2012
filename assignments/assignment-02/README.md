@@ -1,8 +1,8 @@
 CS 240: Computer Science II
 ===========================
 
-Homework 2
-----------
+Assignment 02
+-------------
 
 ### Description
 

@@ -3,11 +3,9 @@
 
 import pygame
 
-pygame.init()   # Initialized pygame module
-
-# Screen size
 width, height = 640, 480
 
+<<<<<<< HEAD
 screen = pygame.display.set_mode((width, height))
 
 ball = pygame.image.load("ball.gif").convert()
@@ -70,3 +68,47 @@ while running:
         if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
             # exit()
             running = False
+=======
+def init():
+    pygame.init()   # Initialized pygame module
+
+    # Screen
+    return pygame.display.set_mode((width, height))
+
+def main(screen):
+    # Load the image
+    ball = pygame.image.load("ball.gif").convert_alpha()
+    pygame.draw.circle(ball, pygame.Color('green'), (25, 25), 10)
+    ball_rect = ball.get_rect()
+
+    horizontal = 1
+    vertical = 2
+
+    running = True
+
+    while running:
+    #    print 'looping'
+
+        screen.fill((0, 0, 0))          # Redraw background
+        screen.blit(ball, ball_rect)    # Draw ball to screen
+        pygame.display.flip()           # Display screen in window
+
+        # Ball motion
+        # ball_rect = ball_rect.move(horizontal, vertical)      Poor version, that makes new rectangles
+        ball_rect.move_ip(horizontal, vertical)
+
+        # Bounds checking
+        if ball_rect.right >= width or ball_rect.left <= 0:
+            horizontal *= -1
+        if ball_rect.bottom >= height or ball_rect.top <= 0:
+            vertical *= -1
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_q):
+                # exit()
+                running = False
+
+
+screen = init()
+main(screen)
+>>>>>>> 84d0211154a1133528966662a4d5759e54efc531
